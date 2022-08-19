@@ -46,19 +46,19 @@
     </div>
   </form>
     
-  <div class="row mt-4" data-aos="zoom-out" data-aos-delay="1600">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      {{ $certificates->links() }}
+  @isset($certificates)
+    <div class="row mt-4" data-aos="zoom-out" data-aos-delay="1600">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        {{ $certificates->links() }}
+      </div>
     </div>
-  </div>
 
-  <div class="row">
+    <div class="row">
     @php
       $i = 1800;
     @endphp
 
-    @isset($certificates)
       @foreach ($certificates as $certificate)
         <div class="col-lg-3 col-sm-12 d-flex justify-content-start my-2" data-aos="zoom-in" data-aos-delay="{{ $i }}">
           <div class="card bg-light text-dark d-flex justify-content-center align-items-center card-square">
@@ -85,17 +85,18 @@
           $i = $i + 100;
         @endphp
       @endforeach
-    @endisset
     
-  </div>
-
-  @if ($certificates->total() > 8)
-    <div class="row mt-4 mb-5">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-        {{ $certificates->links() }}
-      </div>
+    
     </div>
-  @endif
+
+    @if ($certificates->total() > 8)
+      <div class="row mt-4 mb-5">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          {{ $certificates->links() }}
+        </div>
+      </div>
+    @endif
+  @endisset
 
 @endsection
