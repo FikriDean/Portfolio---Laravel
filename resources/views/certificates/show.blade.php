@@ -22,6 +22,9 @@
         <a class="btn btn-primary" data-bs-toggle="collapse" href="#dataCollapse" role="button" aria-expanded="false" aria-controls="dataCollapse" id="collapseButton">
           Hide Informations
         </a>
+        <a class="btn btn-success" href="{{ $certificate->link }}" target="_blank">
+          View Certificate
+        </a>
       </p>
       
       <div class="collapse multi-collapse show w-100" id="dataCollapse">
