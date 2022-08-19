@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+body {
+  hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    height: 1px;
+  }
+
+  .mono {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .square-middle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rectangle-middle {
+    width: 200px;
+    height: 150px;
+  }
+
+  .square-fr {
+    width: 1fr;
+    height: 1fr;
+  }
+
+  .rectangle-fr {
+    width: 2fr;
+    height: 1fr;
+    max-width: 700px;
+    max-height: 350px;
+  }
+
+  .card-square {
+    width: 600px;
+    height: 400px;
+  }
+
+  .mw-300 {
+    max-width: 300px;
+  }
+
+  .mw-400 {
+    max-width: 400px;
+  }
+
+  .mw-500 {
+    max-width: 500px;
+  }
+
+  .profile-picture {
+    max-width: 40px;
+  }
+
+  .profile-card {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .hover:hover {
+    transition: all 300ms ;
+    transform: scale(1.3);
+  }
+
+  .active {
+    font-weight: 600;
+  }
+
+  .translate-topleft:hover {
+    transform: translate(-20px, -20px);
+    transition: all 300ms;
+  }
+
+  .translate-topright:hover {
+    transform: translate(20px, -20px);
+    transition: all 300ms;
+  }
+
+  .translate-bottomleft:hover {
+    transform: translate(-20px, 20px);
+    transition: all 300ms;
+  }
+
+  .translate-bottomright:hover {
+    transform: translate(20px, 20px);
+    transition: all 300ms;
+  }
+
+
+}
