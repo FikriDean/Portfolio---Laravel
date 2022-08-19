@@ -42,7 +42,7 @@
     @enderror
 
     <div class="mb-3">
-      <label for="image" class="form-label text-dark">Post Cover</label>
+      <label for="image" class="form-label text-dark">Certificate Image</label>
       <input class="form-control bg-light text-dark btn-secondary  @error('category_id') is-invalid @enderror" type="file" id="image" name="image">
     </div>
 

@@ -49,8 +49,8 @@
                 <td>{{ $certificate->updated_at->diffForHumans() }}</td>
               </tr>
               <tr>
-                <td>Body</td>
-                <td>{{ $certificate->body }}</td>
+                <td>About</td>
+                <td>{!! $certificate->body !!}</td>
               </tr>
             </tbody>
           </table>
