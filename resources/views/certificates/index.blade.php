@@ -58,32 +58,35 @@
       $i = 1800;
     @endphp
 
-    @foreach ($certificates as $certificate)
-      <div class="col-lg-3 col-sm-12 d-flex justify-content-start my-2" data-aos="zoom-in" data-aos-delay="{{ $i }}">
-        <div class="card bg-light text-dark d-flex justify-content-center align-items-center card-square">
-          <img src="{{ $certificate->image }}" class="card-img-top rectangle-middle mt-4 rounded" alt="{{ $certificate->title }}">
-          <div class="card-body d-flex flex-column justify-content-between mt-4 w-100">
-            <div>
-              <h5 class="card-title text-center w-100">{{ $certificate->title }}</h5>
-              <p class="card-text text-center w-100">
-                @php
-                  if (strlen($certificate->excerpt) > 50) {
-                    echo substr($certificate->excerpt, 0, 50) . '...';
-                  } else {
-                    echo $certificate->excerpt;
-                  }
-                @endphp 
-              </p>
+    @isset($certificates)
+      @foreach ($certificates as $certificate)
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-start my-2" data-aos="zoom-in" data-aos-delay="{{ $i }}">
+          <div class="card bg-light text-dark d-flex justify-content-center align-items-center card-square">
+            <img src="{{ $certificate->image }}" class="card-img-top rectangle-middle mt-4 rounded" alt="{{ $certificate->title }}">
+            <div class="card-body d-flex flex-column justify-content-between mt-4 w-100">
+              <div>
+                <h5 class="card-title text-center w-100">{{ $certificate->title }}</h5>
+                <p class="card-text text-center w-100">
+                  @php
+                    if (strlen($certificate->excerpt) > 50) {
+                      echo substr($certificate->excerpt, 0, 50) . '...';
+                    } else {
+                      echo $certificate->excerpt;
+                    }
+                  @endphp 
+                </p>
+              </div>
+              
+              <a href="certificates/{{ $certificate->slug }}" class="btn btn-primary mt-3 w-100">View Certificate</a>
             </div>
-            
-            <a href="certificates/{{ $certificate->slug }}" class="btn btn-primary mt-3 w-100">View Certificate</a>
           </div>
         </div>
-      </div>
-      @php
-        $i = $i + 100;
-      @endphp
-    @endforeach
+        @php
+          $i = $i + 100;
+        @endphp
+      @endforeach
+    @endisset
+    
   </div>
 
   @if ($certificates->total() > 8)
