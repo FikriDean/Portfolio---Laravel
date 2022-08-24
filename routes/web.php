@@ -27,7 +27,11 @@ use App\Http\Controllers\AdminCertificateController;
 Route::get('/', [HomeController::class, 'index']);
 
 // Certificate Route
-Route::resource('/certificates', CertificateController::class);
+Route::resource('/certificates', CertificateController::class, [
+  'names' => [
+    'index' => 'certificates'
+  ]
+]);
 
 // Register Route
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');

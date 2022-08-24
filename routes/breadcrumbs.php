@@ -10,7 +10,7 @@ use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
 
 Breadcrumbs::for('certificates', function (BreadcrumbTrail $trail) {
-  $trail->push('Certificates', route('certificates.index'));
+  $trail->push('Certificates', route('certificates'));
 });
 
 
