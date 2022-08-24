@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Certificate;
+use App\Models\Project;
 use App\Models\Category;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -59,5 +60,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Certificate::factory(30)->create();
+        Project::factory(30)->create();
     }
 }

@@ -69,6 +69,13 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link {{ Request::is('dashboard/admin/projects*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/admin/projects">
+          <span data-feather="code" class="align-text-bottom"></span>
+          Manage Projects
+        </a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link {{ Request::is('dashboard/admin/categories*') ? 'active text-light' : 'text-secondary' }}" aria-current="page" href="/dashboard/admin/categories">
           <span data-feather="columns" class="align-text-bottom"></span>
           Manage Categories

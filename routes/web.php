@@ -1,15 +1,19 @@
 <?php
 
+use App\Models\CommentProject;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\CommentProjectController;
 use App\Http\Controllers\AdminCertificateController;
 
 /*
@@ -29,7 +33,13 @@ Route::get('/', [HomeController::class, 'index']);
 // Certificate Route
 Route::resource('/certificates', CertificateController::class, [
   'names' => [
-    'index' => 'certificates'
+    'index' => 'certificates',
+  ]
+]);
+
+Route::resource('/projects', ProjectController::class, [
+  'names' => [
+    'index' => 'projects',
   ]
 ]);
 
@@ -45,6 +55,9 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->midd
 // Comment Route
 Route::resource('/comment', CommentController::class)->middleware('auth');
 
+// CommentProject Route
+Route::resource('/commentproject', CommentProjectController::class)->middleware('auth');
+
 // Dashboard Route
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
@@ -53,6 +66,9 @@ Route::resource('/dashboard/user', DashboardUserController::class)->middleware('
 
 // Dashboard Admin Certificate Route
 Route::resource('/dashboard/admin/certificates', AdminCertificateController::class)->middleware('admin');
+
+// Dashboard Admin Projects Route
+Route::resource('/dashboard/admin/projects', AdminProjectController::class)->middleware('admin');
 
 // Dashboard Admin Categories Route
 Route::resource('/dashboard/admin/categories', AdminCategoryController::class)->middleware('admin');

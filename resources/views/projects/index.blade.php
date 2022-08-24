@@ -6,11 +6,11 @@
   
   <div class="row d-flex justify-content-center align-items-center mt-2" data-aos="fade-down" data-aos-delay="700">
     <div class="col-lg-12 col-sm-12 d-flex justify-content-start">
-      {{ Breadcrumbs::render('certificates') }}
+      {{ Breadcrumbs::render('projects') }}
     </div>
   </div>
 
-  <form action="/certificates" method="GET">
+  <form action="/projects" method="GET">
 
     @if(request('category'))
       <input type="hidden" name="category" value="{{ request('category') }}">
@@ -31,11 +31,11 @@
 
       <ul class="dropdown-menu bg-light">
         <li>
-          <a class="dropdown-item {{ request('category') == '' ? 'active text-light' : 'text-dark' }}" href="/certificates?category=">All Category</a>
+          <a class="dropdown-item {{ request('category') == '' ? 'active text-light' : 'text-dark' }}" href="/projects?category=">All Category</a>
         </li>
         @foreach ($categories as $category)
           <li>
-            <a class="dropdown-item {{ request('category') == $category->slug ? 'active text-light' : 'text-dark' }}" href="/certificates?category={{ $category->slug }}">{{ $category->name }}</a>
+            <a class="dropdown-item {{ request('category') == $category->slug ? 'active text-light' : 'text-dark' }}" href="/projects?category={{ $category->slug }}">{{ $category->name }}</a>
           </li>
         @endforeach
       </ul>
@@ -46,11 +46,11 @@
     </div>
   </form>
     
-  @isset($certificates)
+  @isset($projects)
     <div class="row mt-4" data-aos="zoom-out" data-aos-delay="1600">
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
-        {{ $certificates->links() }}
+        {{ $projects->links() }}
       </div>
     </div>
 
@@ -59,25 +59,25 @@
       $i = 1800;
     @endphp
 
-      @foreach ($certificates as $certificate)
+      @foreach ($projects as $project)
         <div class="col-lg-3 col-sm-12 d-flex justify-content-start my-2" data-aos="zoom-in" data-aos-delay="{{ $i }}">
           <div class="card bg-light text-dark d-flex justify-content-center align-items-center card-square">
-            <img src="{{ asset($certificate->image) }}" class="card-img-top rectangle-middle mt-4 rounded" alt="{{ $certificate->title }}">
+            <img src="{{ asset($project->image) }}" class="card-img-top rectangle-middle mt-4 rounded" alt="{{ $project->title }}">
             <div class="card-body d-flex flex-column justify-content-between mt-4 w-100">
               <div>
-                <h5 class="card-title text-center w-100">{{ $certificate->title }}</h5>
+                <h5 class="card-title text-center w-100">{{ $project->title }}</h5>
                 <p class="card-text text-center w-100">
                   @php
-                    if (strlen($certificate->excerpt) > 50) {
-                      echo substr($certificate->excerpt, 0, 50) . '...';
+                    if (strlen($project->excerpt) > 50) {
+                      echo substr($project->excerpt, 0, 50) . '...';
                     } else {
-                      echo $certificate->excerpt;
+                      echo $project->excerpt;
                     }
                   @endphp 
                 </p>
               </div>
               
-              <a href="certificates/{{ $certificate->slug }}" class="btn btn-primary mt-3 w-100">View Certificate</a>
+              <a href="projects/{{ $project->slug }}" class="btn btn-primary mt-3 w-100">View Project</a>
             </div>
           </div>
         </div>
@@ -89,18 +89,18 @@
     
     </div>
 
-    @if ($certificates->total() > 8)
+    @if ($projects->total() > 8)
       <div class="row mt-4 mb-5">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-          {{ $certificates->links() }}
+          {{ $projects->links() }}
         </div>
       </div>
     @endif
   @endisset
 
   
-  @if (count($certificates) == 0)
+  @if (count($projects) == 0)
     <x-noresult></x-noresult>
   @endif
 
