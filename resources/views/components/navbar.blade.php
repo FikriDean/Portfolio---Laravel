@@ -5,20 +5,19 @@
 }
 @endphp
 
-<nav class="navbar navbar-expand-lg bg-light" data-aos="fade-down" data-aos-delay="500">
+<nav class="navbar navbar-expand-lg bg-transparent py-3 mb-3" data-aos="fade-down" data-aos-delay="600">
   <div class="container">
-    <a class="navbar-brand mono text-dark" href="/">Dean - 2022</a>
-    <div>
-      <a class="text-decoration-none mono text-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-        Menu
-      </a>
+    <a class="navbar-brand mono fs-5 fw-normal text-dark" href="/">Dean - 2022</a>
+
+    <div class="d-flex ms-auto" role="search">
+      <a class="fs-5 mono fw-normal text-decoration-none text-dark" data-bs-toggle="offcanvas" href="#navbar" role="button" aria-controls="navbar">Menu</a>
     </div>
   </div>
 </nav>
 
-<div class="offcanvas offcanvas-start bg-white text-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start bg-white text-dark" tabindex="-1" id="navbar" aria-labelledby="navbarLabel">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Dean - 2022</h5>
+    <h5 class="offcanvas-title fw-normal fs-6" id="navbarLabel">Dean - 2022</h5>
     <button type="button" class="bg-transparent border-0 fs-4 text-dark" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-circle"></i></button>
   </div>
   <div class="offcanvas-body">
@@ -41,12 +40,11 @@
           <input type="checkbox" class="form-check-input" id="darkSwitch" />
           <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
         </div>
-
       </li>
 
       @auth
         <div class="dropdown mt-3 bg-light text-light">
-          <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hello, {{ auth()->user()->name }}
           </button>
           <ul class="dropdown-menu bg-light border border-primary">     
@@ -60,11 +58,11 @@
 
       @else
         <li class="nav-item mt-4">
-          <a class="btn btn-primary {{ Request::is('projects') ? 'active ' : '' }} w-100" href="/login">Log in</a>
+          <a class="btn btn-primary w-100" href="/login">Log in</a>
         </li>
 
         <li class="nav-item mt-2">
-          <a class="btn btn-outline-primary {{ Request::is('projects') ? 'active ' : '' }} w-100" href="/register">Sign up</a>
+          <a class="btn btn-outline-primary w-100" href="/register">Sign up</a>
         </li>
       @endauth
       

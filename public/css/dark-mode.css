@@ -1,5 +1,7 @@
 [data-theme="dark"] {
-  background-color: #111 !important;
+  background-image: url(../img/background-2.jpg);
+  cursor: url(../svg/cursorWhite.svg), auto;
+  background-size: cover;
 }
 
 [data-theme="dark"] .bg-light {
@@ -80,3 +82,33 @@
   background-color: #6c757d !important;
   color: rgb(230, 230, 230) !important;
 }
+
+[data-theme="dark"] trix-toolbar .trix-button--icon-bold::before {
+  background-image: url('../svg/format_bold_black_24dp.svg'); 
+  filter: hue-rotate(100deg);
+}
+
+[data-theme="dark"] trix-toolbar .trix-button--icon-italic::before {
+  background-image: url('../svg/format_italic_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-link::before {
+  background-image: url('../svg/add_link_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-strike::before {
+  background-image: url('../svg/strikethrough_s_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-quote::before {
+  background-image: url('../svg/format_quote_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-heading-1::before {
+  background-image: url('../svg/text_fields_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-code::before {
+  background-image: url('../svg/code_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-bullet-list::before {
+  background-image: url('../svg/format_list_bulleted_add_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-number-list::before {
+  background-image: url('../svg/format_list_numbered_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-undo::before {
+  background-image: url('../svg/undo_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-redo::before {
+  background-image: url('../svg/redo_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-decrease-nesting-level::before {
+  background-image: url('../svg/format_indent_decrease_black_24dp.svg'); }
+[data-theme="dark"] trix-toolbar .trix-button--icon-increase-nesting-level::before {
+  background-image: url('../svg/format_indent_increase_black_24dp.svg'); }

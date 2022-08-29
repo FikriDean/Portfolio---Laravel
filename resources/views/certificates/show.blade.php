@@ -1,14 +1,12 @@
 @extends('layouts.main')
 
-<x-navbar />
-
 @section('container')
   
-  <div class="row d-flex justify-content-center align-items-center mt-2" data-aos="fade-down" data-aos-delay="700">
-    <div class="col-lg-12 col-sm-12 d-flex justify-content-start">
-      {{ Breadcrumbs::render('certificate', $certificate) }}
-    </div>
+<div class="row d-flex justify-content-start align-items-center mt-2" data-aos="fade-down" data-aos-delay="700">
+  <div class="col-lg-12 d-flex justify-content-start">
+    {{ Breadcrumbs::render('certificate', $certificate) }}
   </div>
+</div>
 
   <div class="row" data-aos="zoom-out" data-aos-delay="1000">
     <div class="col-lg-12 d-flex justify-content-center mt-4">
@@ -23,7 +21,7 @@
           Hide Informations
         </a>
         <a class="btn btn-success" href="{{ $certificate->link }}" target="_blank">
-          View Certificate
+          View certificate
         </a>
       </p>
       
@@ -103,7 +101,7 @@
                 <small class="text-muted">Edited</small>  
               @endif
               @auth
-                @if (auth()->user()->id === $comment->user->id)
+                @if (auth()->user()->id === $comment->user->id || auth()->user()->is_admin == 1)
                   <div class="d-flex mt-2">
                     <form action="/comment/{{ $comment->id }}" method="POST">
                       @csrf

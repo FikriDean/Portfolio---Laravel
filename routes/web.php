@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\CommentProject;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CommentController;
@@ -30,39 +31,31 @@ use App\Http\Controllers\AdminCertificateController;
 // Home Route
 Route::get('/', [HomeController::class, 'index']);
 
-// Certificate Route
+// Certificates Route
 Route::resource('/certificates', CertificateController::class, [
   'names' => [
     'index' => 'certificates',
   ]
 ]);
 
+// Projects Route
 Route::resource('/projects', ProjectController::class, [
   'names' => [
     'index' => 'projects',
   ]
 ]);
 
-// Register Route
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'registerSubmit'])->name('register')->middleware('guest');
-
-// Login Route
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
-Route::post('/login', [LoginController::class, 'loginSubmit'])->name('login')->middleware('guest');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
-
 // Comment Route
-Route::resource('/comment', CommentController::class)->middleware('auth');
+Route::resource('/comment', CommentController::class)->middleware(['auth', 'verified']);
 
 // CommentProject Route
-Route::resource('/commentproject', CommentProjectController::class)->middleware('auth');
+Route::resource('/commentproject', CommentProjectController::class)->middleware(['auth', 'verified']);
 
 // Dashboard Route
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified']);
 
 // Dashboard User Route
-Route::resource('/dashboard/user', DashboardUserController::class)->middleware('auth');
+Route::resource('/dashboard/user', DashboardUserController::class)->middleware(['auth']);
 
 // Dashboard Admin Certificate Route
 Route::resource('/dashboard/admin/certificates', AdminCertificateController::class)->middleware('admin');
@@ -75,3 +68,5 @@ Route::resource('/dashboard/admin/categories', AdminCategoryController::class)->
 
 // Dashboard Admin Users Route
 Route::resource('/dashboard/admin/users', AdminUserController::class)->middleware('admin');
+
+require __DIR__ . '/auth.php';

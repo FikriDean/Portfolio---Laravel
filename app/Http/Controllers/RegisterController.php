@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -25,12 +27,22 @@ class RegisterController extends Controller
       'image' => ['image', 'file', 'max:1024']
     ]);
 
+    $credentials = $request->validate([
+      'email' => ['required', 'email:dns'],
+      'password' => ['required', 'min:3', 'max:255']
+    ]);
+
     $validatedData['password'] = Hash::make($validatedData['password']);
 
     $validatedData['image'] = 'img/profile.png';
 
     User::create($validatedData);
 
-    return redirect('/login')->with('success', 'Registration successfull! Please login.');
+    // event(new Registered($validatedData));
+
+    // if (Auth::attempt($credentials)) {
+    //   $request->session()->regenerate();
+    //   return redirect()->intended('/email/verify');
+    // }
   }
 }

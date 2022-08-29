@@ -31,11 +31,6 @@ class AdminUserController extends Controller
      */
     public function create()
     {
-        $this->authorize('admin');
-
-        return view('dashboard.admin.users.create', [
-            'title' => 'Create User'
-        ]);
     }
 
     /**
@@ -46,32 +41,6 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => ['required', 'max:255'],
-            'username' => ['required', 'min:3', 'max:255', 'unique:users'],
-            'email' => ['required', 'email:dns', 'unique:users'],
-            'password' => ['required', 'min:3', 'max:255']
-        ]);
-
-        $validatedData['password'] = Hash::make($validatedData['password']);
-
-        if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('public_profiles');
-            $image = $request->file('image');
-            $input['imageName'] = $validatedData['image'];
-            $destinationPath = public_path('/public_profiles');
-            $image->move($destinationPath, $input['imageName']);
-        }
-
-        if ($request->is_admin == 'on') {
-            $validatedData['is_admin'] = true;
-        } else {
-            $validatedData['is_admin'] = false;
-        }
-
-        User::create($validatedData);
-
-        return redirect('/dashboard/admin/users')->with('success', 'User has been created!');
     }
 
     /**

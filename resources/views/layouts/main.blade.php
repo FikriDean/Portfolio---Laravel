@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>DEAN | {{ $title }}</title>
+    <title>DEAN @isset($title) | {{ $title }}@endisset</title>
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -26,11 +25,15 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   
   </head>
-  <body class="bg-light">
+  <body class="bg-white">
+
+    <x-navbar></x-navbar>
    
     <div class="container">
       @yield("container")
     </div>
+
+    <x-footer></x-footer>
 
     {{-- AOS --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

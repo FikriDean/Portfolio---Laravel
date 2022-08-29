@@ -21,7 +21,7 @@ class AdminCertificateController extends Controller
 
         return view('dashboard.admin.certificates.index', [
             'title' => 'Certificates',
-            'certificates' => Certificate::all()
+            'certificates' => Certificate::with(['category', 'user'])->get()
         ]);
     }
 

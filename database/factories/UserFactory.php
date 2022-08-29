@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Database\DBAL\TimestampType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -23,7 +24,8 @@ class UserFactory extends Factory
             'email' => fake()->safeEmail(),
             'password' => bcrypt('password'),
             'image' => 'img/profile.png',
-            'is_admin' => true
+            'is_admin' => true,
+            'email_verified_at' => fake()->dateTime()
         ];
     }
 

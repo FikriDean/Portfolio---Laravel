@@ -21,7 +21,7 @@ class AdminProjectController extends Controller
 
         return view('dashboard.admin.projects.index', [
             'title' => 'Projects',
-            'projects' => Project::all()
+            'projects' => Project::with(['category', 'user'])->get()
         ]);
     }
 

@@ -65,7 +65,7 @@
     @enderror
 
     <div class="mb-3">
-      <input class="form-check-input bg-light text-dark" type="checkbox" name="is_admin" id="is_admin">
+      <input class="form-check-input" type="checkbox" name="is_admin" id="is_admin">
       <label class="form-check-label mx-1 fw-bold text-dark" for="is_admin">
         Administrator Access
       </label>

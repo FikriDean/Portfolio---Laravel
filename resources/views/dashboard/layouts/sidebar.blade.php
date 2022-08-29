@@ -23,7 +23,6 @@
           <input type="checkbox" class="form-check-input" id="darkSwitch" />
           <label class="custom-control-label" for="darkSwitch"></label>
         </div>
-
       </li>
 
       <li class="nav-item">
@@ -50,8 +49,7 @@
       
       <li class="nav-item mt-3 d-flex justify-content-center">
         <a class="nav-link text-danger border-danger border-bottom d-inline" aria-current="page">
-          <i class="fa-solid fa-lock"></i>
-          Administrator
+          <i class="fa-solid fa-lock"></i> Administrator Access
         </a>
       </li>
       

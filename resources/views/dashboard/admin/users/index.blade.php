@@ -6,8 +6,6 @@
 
   <div class="border-top my-3"></div>
 
-  <a href="/dashboard/admin/users/create" class="btn btn-primary mt-2 mb-3">Create User</a>
-
   @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
       {{ session('success') }}

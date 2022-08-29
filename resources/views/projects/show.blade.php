@@ -1,14 +1,12 @@
 @extends('layouts.main')
 
-<x-navbar />
-
 @section('container')
   
-  <div class="row d-flex justify-content-center align-items-center mt-2" data-aos="fade-down" data-aos-delay="700">
-    <div class="col-lg-12 col-sm-12 d-flex justify-content-start">
-      {{ Breadcrumbs::render('project', $project) }}
-    </div>
+<div class="row d-flex justify-content-start align-items-center mt-2" data-aos="fade-down" data-aos-delay="700">
+  <div class="col-lg-12 d-flex justify-content-start">
+    {{ Breadcrumbs::render('project', $project) }}
   </div>
+</div>
 
   <div class="row" data-aos="zoom-out" data-aos-delay="1000">
     <div class="col-lg-12 d-flex justify-content-center mt-4">
@@ -23,7 +21,7 @@
           Hide Informations
         </a>
         <a class="btn btn-success" href="{{ $project->link }}" target="_blank">
-          View Project
+          View project
         </a>
       </p>
       
@@ -64,7 +62,7 @@
     <div class="col-lg-4 rounded d-flex flex-column flex-wrap justify-content-start p-4 border border-1 mt-5 bg-light text-dark" data-aos="fade-down" data-aos-delay="200">
       <h5 class="text-center">Comments</h5>
 
-      <form action="/commentproject" method="POST" class="d-flex justify-content-center align-items-center my-3">
+      <form action="/comment" method="POST" class="d-flex justify-content-center align-items-center my-3">
         @csrf
         
         <input type="hidden" name="project_id" value="{{ $project->id }}">
@@ -103,9 +101,9 @@
                 <small class="text-muted">Edited</small>  
               @endif
               @auth
-                @if (auth()->user()->id === $comment->user->id)
+                @if (auth()->user()->id === $comment->user->id || auth()->user()->is_admin == 1)
                   <div class="d-flex mt-2">
-                    <form action="/commentproject/{{ $comment->id }}" method="POST">
+                    <form action="/comment/{{ $comment->id }}" method="POST">
                       @csrf
                       @method('delete')
 
