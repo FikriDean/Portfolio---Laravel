@@ -52,7 +52,7 @@ class AdminProjectController extends Controller
 
         $validatedData = $request->validate([
             'title' => ['required', 'min:3', 'max:50'],
-            'image' => ['image', 'file', 'max:1024'],
+            'image' => ['image', 'file', 'max:4096'],
             'category_id' => ['required'],
             'body' => ['required', 'min:10'],
             'link' => ['url']

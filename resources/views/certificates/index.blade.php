@@ -65,7 +65,7 @@
       @foreach ($certificates as $certificate)
         <div class="col-lg-6 col-sm-12 d-flex justify-content-center my-2" data-aos="zoom-in" data-aos-delay="{{ $i }}">
           <div class="card bg-light text-dark d-flex justify-content-center align-items-center card-square">
-            <img src="{{ asset($certificate->image) }}" class="card-img-top rectangle-middle mt-4 rounded" alt="{{ $certificate->title }}">
+            <img src="{{ asset($certificate->image) }}" class="card-img-top rectangle-middle-certificate mt-4 rounded" alt="{{ $certificate->title }}">
             <div class="card-body d-flex flex-column justify-content-between mt-4 w-100">
               <div>
                 <h5 class="card-title text-center w-100">{{ $certificate->title }}</h5>

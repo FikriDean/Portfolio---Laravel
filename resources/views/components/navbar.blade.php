@@ -1,10 +1,3 @@
-@php
-  function clean($string) {
-    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
-    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
-}
-@endphp
-
 <nav class="navbar navbar-expand-lg bg-transparent py-3 mb-3" data-aos="fade-down" data-aos-delay="600">
   <div class="container">
     <a class="navbar-brand mono fs-5 fw-normal text-dark" href="/">Dean - 2022</a>

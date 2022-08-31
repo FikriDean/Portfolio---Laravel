@@ -16,10 +16,15 @@ class Certificate extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function category()
+    public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->morphToMany(Category::class, 'categoriable');
     }
+
+    // public function category()
+    // {
+    //     return $this->belongsTo(Category::class);
+    // }
 
     public function comments()
     {
