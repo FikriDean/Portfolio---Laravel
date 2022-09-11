@@ -11,25 +11,25 @@ class Category extends Model
 
     protected $guarded = ['id'];
 
-    public function certificates()
-    {
-        return $this->morphedByMany(Certificate::class, 'categoriable');
-    }
-
-    public function projects()
-    {
-        return $this->morphedByMany(Project::class, 'categoriable');
-    }
-
     // public function certificates()
     // {
-    //     return $this->hasMany(Certificate::class);
+    //     return $this->morphedByMany(Certificate::class, 'categoriable');
     // }
 
     // public function projects()
     // {
-    //     return $this->hasMany(Project::class);
+    //     return $this->morphedByMany(Project::class, 'categoriable');
     // }
+
+    public function certificates()
+    {
+        return $this->hasMany(Certificate::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 
     public function getRouteKeyName()
     {

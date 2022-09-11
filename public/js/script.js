@@ -1,10 +1,13 @@
 $( document ).ready(function() {
+
+  // AOS
   AOS.init({
     once: true,
     startEvent: 'DOMContentLoaded',
     offset: -5000
  })
 
+  // Navbar Collapse
   $('#collapseButton').click(function() {
     if ($(this).hasClass('collapsed')) {
       $(this).html('Show Description')
@@ -13,6 +16,7 @@ $( document ).ready(function() {
     }
   })
 
+  // Toast
   $(".toast").toast({ delay: 10000 });
   $(".toast").toast({ autohide: true });
 
@@ -40,4 +44,46 @@ $( document ).ready(function() {
                         If you are not comfortable with a bright background, please use dark mode to change the background color        </div>
                       </div>`)
   }, 6000);
+
+  // Tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+  // About
+  let aboutChecker = true;
+
+  function aboutTimeout() {
+    setTimeout(function () {
+      if (aboutChecker) {
+        $('.aboutChangingOne').css({
+          'opacity': 0,
+          'display': 'flex'
+        });
+
+        $('.aboutChangingTwo').css({
+          'display': 'flex',
+          'opacity': 1,
+        });
+
+        aboutChecker = false;
+      } else {
+        $('.aboutChangingOne').css({
+          'display': 'flex',
+          'opacity': 1
+        });
+
+        $('.aboutChangingTwo').css({
+          'opacity': 0,
+          'display': 'none'
+        });
+
+        aboutChecker = true;
+      }
+        
+        aboutTimeout();
+    }, 5000);
+  }
+
+  aboutTimeout();
+
 });

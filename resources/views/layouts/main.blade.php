@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   
   </head>
-  <body class="bg-white">
+  <body>
 
     <x-navbar></x-navbar>
    
