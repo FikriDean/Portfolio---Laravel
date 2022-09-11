@@ -4,6 +4,7 @@
 
   <div class="row">
 
+    
     <div class="col-lg-4 d-flex align-items-center justify-content-center px-5 my-5">
       <img src="{{ asset('img/dean-3.jpg') }}" alt="FIKRI DEAN RADITYO" class="square-middle rounded-circle shadow-lg" data-aos="zoom-in" data-aos-delay="1000">
     </div>
