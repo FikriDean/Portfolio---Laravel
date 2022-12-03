@@ -100,6 +100,11 @@ body {
         max-height: 100px;
     }
 
+    .organization {
+        word-break: break-all;
+        width: 700px;
+    }
+
     .profile-card {
         max-width: 200px;
         max-height: 200px;
@@ -166,6 +171,11 @@ body {
         .profile-picture-bigger {
             max-width: 70px;
             max-height: 70px;
+        }
+
+        .organization {
+            word-break: break-all;
+            width: inherit;
         }
     }
 }

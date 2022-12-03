@@ -97,47 +97,54 @@
 				</div>
 
 				<div class="row py-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/rohis.jpeg') }}"
 																alt="Rohis 5 Depok">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">Head of Public Relations Division (2019-2020)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as Head of Public Relations Division at Islamic spiritual
+																<h4 class="text-dark fw-bold poppins fs-4 organization">Head of Public
+																				Relations Division (2019-2020)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as Head of
+																				Public Relations Division at Islamic spiritual
 																				extracurricular at public senior high school 5 in Depok, West Java</p>
 												</div>
 								</div>
 				</div>
 
 				<div class="row py-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/sc.jpg') }}"
 																alt="Science Club 5 Depok">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">1st secretary (2019-2020)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as 1st secretary in science club extracurricula at public
+																<h4 class="text-dark fw-bold poppins fs-4 organization">1st secretary
+																				(2019-2020)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as 1st
+																				secretary in science club extracurricula at public
 																				senior high school 5 in Depok, West Java</p>
 												</div>
 								</div>
 				</div>
 
 				<div class="row pb-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/himti.png') }}"
 																alt="HIMTI">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">Course Facilitator (2022-2023)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as Course Facilitator at HIMTI UIN Jakarta</p>
+																<h4 class="text-dark fw-bold poppins fs-4 organization">Course
+																				Facilitator (2022-2023)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as Course
+																				Facilitator at HIMTI UIN Jakarta</p>
 												</div>
 								</div>
 				</div>
 
 				<div class="row pb-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/gdsc2.png') }}"
 																alt="GDSC">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">Head Manager of Web Developer (2022-2023)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as Head
+																<h4 class="text-dark fw-bold poppins fs-4 organization">Head Manager of
+																				Web Developer (2022-2023)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as Head
 																				Manager of Web Developer at
 																				GDSC UIN Jakarta</p>
 												</div>
@@ -146,23 +153,27 @@
 				</div>
 
 				<div class="row pb-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/gdsc2.png') }}"
 																alt="GDSC">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">Web Developer Course Facilitator (2022-2023)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as Web Developer Course Facilitator at GDSC UIN Jakarta</p>
+																<h4 class="text-dark fw-bold poppins fs-4 organization">Web Developer
+																				Course Facilitator (2022-2023)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as Web
+																				Developer Course Facilitator at GDSC UIN Jakarta</p>
 												</div>
 								</div>
 				</div>
 
 				<div class="row pb-3 px-3">
-								<div class="col-lg-12 d-flex align-items-center justify-content-start mb-5" data-aos="zoom-out">
+								<div class="col-lg-12 d-flex align-items-center justify-content-center mb-5" data-aos="zoom-out">
 												<img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/bdi.jpg') }}"
 																alt="BDI">
 												<div>
-																<h4 class="text-dark fw-bold poppins fs-4">Web Developer Intern (2022 - 2023)</h4>
-																<p class="mt-2 text-muted poppins fs-6">Served as Web Developer Intern at Berani Digital ID</p>
+																<h4 class="text-dark fw-bold poppins fs-4 organization">Web Developer
+																				Intern (2022 - 2023)</h4>
+																<p class="mt-2 text-muted poppins fs-6 organization">Served as Web
+																				Developer Intern at Berani Digital ID</p>
 												</div>
 								</div>
 				</div>

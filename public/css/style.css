@@ -100,6 +100,11 @@ body .profile-picture-bigger {
   max-height: 100px;
 }
 
+body .organization {
+  word-break: break-all;
+  width: 700px;
+}
+
 body .profile-card {
   max-width: 200px;
   max-height: 200px;
@@ -180,6 +185,10 @@ body .text-maroon {
   body .profile-picture-bigger {
     max-width: 70px;
     max-height: 70px;
+  }
+  body .organization {
+    word-break: break-all;
+    width: inherit;
   }
 }
 /*# sourceMappingURL=style.css.map */
