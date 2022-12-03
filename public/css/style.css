@@ -27,18 +27,18 @@ body .col-sm-0 {
 body .btn-outline-primary-custom {
   background-color: red;
   color: inherit;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border-color: #0d6efd;
   color: #0d6efd;
 }
 
 body .mono {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 body .poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body .square-middle {
@@ -96,7 +96,8 @@ body .profile-picture {
 }
 
 body .profile-picture-bigger {
-  max-width: 80px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 body .profile-card {
@@ -164,7 +165,7 @@ body .aboutChangingTwo {
 }
 
 body .text-purple {
-  color: #474A8A;
+  color: #474a8a;
 }
 
 body .text-orange {
@@ -172,6 +173,13 @@ body .text-orange {
 }
 
 body .text-maroon {
-  color: #F05340;
+  color: #f05340;
+}
+
+@media only screen and (max-width: 768px) {
+  body .profile-picture-bigger {
+    max-width: 70px;
+    max-height: 70px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

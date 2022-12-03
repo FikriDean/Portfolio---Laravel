@@ -1,164 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 
 body {
-  cursor: url(../svg/cursorBlack.svg), crosshair;
-  background-image: url(../img/background-1.jpg);
-  background-position: center;
-  background-size: cover;
+    cursor: url(../svg/cursorBlack.svg), crosshair;
+    background-image: url(../img/background-1.jpg);
+    background-position: center;
+    background-size: cover;
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
-  overflow-x: hidden !important;
-  overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
 
-  hr {
-    border: 0;
-    clear:both;
-    display:block;
-    width: 96%;               
-    height: 1px;
-  }
+    hr {
+        border: 0;
+        clear: both;
+        display: block;
+        width: 96%;
+        height: 1px;
+    }
 
-  .col-sm-0 {
-    width: 0%;
-  }
+    .col-sm-0 {
+        width: 0%;
+    }
 
-  .btn-outline-primary-custom {
-    background-color: red;
-    color: inherit;
-    transition: all .5s;
-    border-color: #0d6efd;
-    color: #0d6efd;
-  }
+    .btn-outline-primary-custom {
+        background-color: red;
+        color: inherit;
+        transition: all 0.5s;
+        border-color: #0d6efd;
+        color: #0d6efd;
+    }
 
-  .mono {
-    font-family: 'Roboto Mono', monospace;
-  }
+    .mono {
+        font-family: "Roboto Mono", monospace;
+    }
 
-  .poppins {
-    font-family: 'Poppins', sans-serif;
-  }
+    .poppins {
+        font-family: "Poppins", sans-serif;
+    }
 
-  .square-middle {
-    width: 200px;
-    height: 200px;
-  }
+    .square-middle {
+        width: 200px;
+        height: 200px;
+    }
 
-  .rectangle-middle {
-    max-width: 400px;
-    max-height: 350px;
-  }
-  
-  .rectangle-middle-certificate {
-    max-width: 300px;
-    max-height: 300px;
-  }
+    .rectangle-middle {
+        max-width: 400px;
+        max-height: 350px;
+    }
 
-  .rectangle-fr {
-    max-width: 700px;
-    max-height: 350px;
-  }
+    .rectangle-middle-certificate {
+        max-width: 300px;
+        max-height: 300px;
+    }
 
-  .card-square {
-    width: 600px;
-    height: 500px;
-  }
+    .rectangle-fr {
+        max-width: 700px;
+        max-height: 350px;
+    }
 
-  .card-middle {
-    width: 350px;
-    height: 350px;
-  }
+    .card-square {
+        width: 600px;
+        height: 500px;
+    }
 
-  .mw-200 {
-    max-width: 200px;
-  }
+    .card-middle {
+        width: 350px;
+        height: 350px;
+    }
 
-  .mw-250 {
-    max-width: 250px;
-  }
+    .mw-200 {
+        max-width: 200px;
+    }
 
-  .mw-300 {
-    max-width: 300px;
-  }
+    .mw-250 {
+        max-width: 250px;
+    }
 
-  .mw-400 {
-    max-width: 400px;
-  }
+    .mw-300 {
+        max-width: 300px;
+    }
 
-  .mw-500 {
-    max-width: 500px;
-  }
+    .mw-400 {
+        max-width: 400px;
+    }
 
-  .profile-picture {
-    max-width: 40px;
-  }
+    .mw-500 {
+        max-width: 500px;
+    }
 
-  .profile-picture-bigger {
-    max-width: 80px;
-  }
+    .profile-picture {
+        max-width: 40px;
+    }
 
-  .profile-card {
-    max-width: 200px;
-    max-height: 200px;
-  }
+    .profile-picture-bigger {
+        max-width: 100px;
+        max-height: 100px;
+    }
 
-  .text-justify {
-    text-align: justify;
-  }
+    .profile-card {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
-  .hover:hover {
-    transition: all 300ms ;
-    transform: scale(1.3);
-  }
+    .text-justify {
+        text-align: justify;
+    }
 
-  .active {
-    font-weight: 600;
-  }
+    .hover:hover {
+        transition: all 300ms;
+        transform: scale(1.3);
+    }
 
-  .translate-topleft:hover {
-    transform: translate(-20px, -20px);
-    transition: all 300ms;
-  }
+    .active {
+        font-weight: 600;
+    }
 
-  .translate-topright:hover {
-    transform: translate(20px, -20px);
-    transition: all 300ms;
-  }
+    .translate-topleft:hover {
+        transform: translate(-20px, -20px);
+        transition: all 300ms;
+    }
 
-  .translate-bottomleft:hover {
-    transform: translate(-20px, 20px);
-    transition: all 300ms;
-  }
+    .translate-topright:hover {
+        transform: translate(20px, -20px);
+        transition: all 300ms;
+    }
 
-  .translate-bottomright:hover {
-    transform: translate(20px, 20px);
-    transition: all 300ms;
-  }
+    .translate-bottomleft:hover {
+        transform: translate(-20px, 20px);
+        transition: all 300ms;
+    }
 
-  .aboutChangingOne {
-    display: flex;
-    opacity: 1;
-    transition: all 1s;
-  }
+    .translate-bottomright:hover {
+        transform: translate(20px, 20px);
+        transition: all 300ms;
+    }
 
-  .aboutChangingTwo {
-    display: none;
-    opacity: 0;
-    transition: all 1s;
-  }
+    .aboutChangingOne {
+        display: flex;
+        opacity: 1;
+        transition: all 1s;
+    }
 
-  .text-purple {
-    color: #474A8A;
-  }
+    .aboutChangingTwo {
+        display: none;
+        opacity: 0;
+        transition: all 1s;
+    }
 
-  .text-orange {
-    color: #e34c26;
-  }
+    .text-purple {
+        color: #474a8a;
+    }
 
-  .text-maroon {
-    color: #F05340;
-  }
+    .text-orange {
+        color: #e34c26;
+    }
 
+    .text-maroon {
+        color: #f05340;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .profile-picture-bigger {
+            max-width: 70px;
+            max-height: 70px;
+        }
+    }
 }

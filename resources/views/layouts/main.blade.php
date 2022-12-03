@@ -5,10 +5,13 @@
 				<meta charset="UTF-8" />
 				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Welcome to Fikri Dean Radityo's Portfolio Website" />
+				<meta name="description"
+								content="Welcome to Fikri Dean Radityo's Portfolio Website. In this website, i want to show my certificates and my projects. I hope this website can give spirit to others." />
 				<meta name="keywords"
-								content="Fikri, Dean, Radityo, Portfolio, Linkedin, Web, Web Developer, beraniID, berani, creative, modern, responsive, sass, php, laravel" />
-				<title>DEAN @isset($title)
+								content="fikri dean, Fikri, Dean, Radityo, Portfolio, Linkedin, Web, Web Developer, beraniID, berani, creative, modern, responsive, sass, php, laravel" />
+				<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
+				<title>Fikri Dean Radityo Portfolio Website @isset($title)
 												| {{ $title }}
 								@endisset
 				</title>
