@@ -4,7 +4,6 @@
 
   <div class="row">
 
-    
     <div class="col-lg-4 d-flex align-items-center justify-content-center px-5 my-5">
       <img src="{{ asset('img/dean-3.jpg') }}" alt="FIKRI DEAN RADITYO" class="square-middle rounded-circle shadow-lg" data-aos="zoom-in" data-aos-delay="1000">
     </div>
@@ -63,7 +62,6 @@
       <i class="fa-brands fa-sass fs-1 text-danger"></i>
     </div>
     
-    
   </div>
   
   <div class="row py-5 mb-5">
@@ -87,7 +85,7 @@
   </div>
 
   <div class="row py-5 px-3">
-    <div class="col-lg-6 d-flex align-items-start justify-content-center mb-5" data-aos="fade-right" data-aos-offset="-50" data-aos-once="false">
+    <div class="col-lg-6 d-flex align-items-start justify-content-center mb-5" data-aos="zoom-out">
       <img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/rohis.jpeg') }}" alt="Rohis 5 Depok">
       <div>
         <h4 class="text-dark fw-bold poppins fs-4">Head of Public Relations Division (2019-2020)</h4>
@@ -95,7 +93,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 d-flex align-items-start justify-content-center mb-5" data-aos="fade-left" data-aos-offset="-50" data-aos-once="false">
+    <div class="col-lg-6 d-flex align-items-start justify-content-center mb-5" data-aos="zoom-out">
       <img class="profile-picture-bigger rounded-circle border me-3" src="{{ asset('img/sc.jpg') }}" alt="Science Club 5 Depok">
       <div>
         <h4 class="text-dark fw-bold poppins fs-4">1st secretary (2019-2020)</h4>

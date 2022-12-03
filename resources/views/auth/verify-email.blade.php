@@ -35,7 +35,7 @@
                 </div>
             </form>
 
-            <a class="underline text-sm text-dark hover:text-gray-900" href="/">
+            <a class="mx-2 underline text-sm text-dark hover:text-gray-900" href="/">
                 Go to Home Page
             </a>
 
