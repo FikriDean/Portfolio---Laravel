@@ -12,6 +12,16 @@ body ::-webkit-scrollbar {
   display: none;
 }
 
+body .bigger-animation {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+body .bigger-animation:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 body hr {
   border: 0;
   clear: both;
@@ -181,6 +191,23 @@ body .text-maroon {
   color: #f05340;
 }
 
+body .bag-purple {
+  background-color: #474a8a;
+}
+
+body .bag-orange {
+  background-color: #e34c26;
+}
+
+body .bag-maroon {
+  background-color: #f05340;
+}
+
+body .img-tech {
+  max-width: 70px;
+  max-height: 70px;
+}
+
 @media only screen and (max-width: 768px) {
   body .profile-picture-bigger {
     max-width: 70px;
@@ -189,6 +216,10 @@ body .text-maroon {
   body .organization {
     word-break: break-all;
     width: inherit;
+  }
+  body .img-tech {
+    max-width: 40px;
+    max-height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

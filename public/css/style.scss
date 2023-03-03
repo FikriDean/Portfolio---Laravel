@@ -13,6 +13,14 @@ body {
     overflow-x: hidden !important;
     overflow-y: scroll !important;
 
+    .bigger-animation {
+        transition: 300ms;
+    }
+
+    .bigger-animation:hover {
+        transform: scale(1.5);
+    }
+
     hr {
         border: 0;
         clear: both;
@@ -167,6 +175,23 @@ body {
         color: #f05340;
     }
 
+    .bag-purple {
+        background-color: #474a8a;
+    }
+
+    .bag-orange {
+        background-color: #e34c26;
+    }
+
+    .bag-maroon {
+        background-color: #f05340;
+    }
+
+    .img-tech {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
     @media only screen and (max-width: 768px) {
         .profile-picture-bigger {
             max-width: 70px;
@@ -176,6 +201,11 @@ body {
         .organization {
             word-break: break-all;
             width: inherit;
+        }
+
+        .img-tech {
+            max-width: 40px;
+            max-height: 40px;
         }
     }
 }

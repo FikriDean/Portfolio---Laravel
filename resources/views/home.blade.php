@@ -50,7 +50,30 @@
 																</a>
 												</div>
 								</div>
+				</div>
 
+				<div class="row">
+								<div class="col-lg-12 mt-5">
+												<h3 class="poppins fs-5 text-muted text-center" data-aos="zoom-out" data-aos-delay="1700">
+																Featured
+												</h3>
+								</div>
+				</div>
+
+				<div class="row mb-5">
+								<div class="col-lg-6 mt-5 d-flex justify-content-center align-items-center">
+												<a href="">
+																<img class="bigger-animation img-tech" src="{{ asset('img/logo_confido.png') }}" alt="Confido"
+																				style="max-width: 200px">
+												</a>
+								</div>
+
+								<div class="col-lg-6 mt-5 d-flex justify-content-center align-items-center">
+												<a href="">
+																<img class="bigger-animation img-tech" src="{{ asset('img/chat.png') }}" alt="Chat"
+																				style="max-width: 80px">
+												</a>
+								</div>
 				</div>
 
 				<div class="row">
@@ -64,13 +87,19 @@
 				<div class="row py-5">
 								<div class="col-lg-12 d-flex flex-row justify-content-around align-items-center" data-aos="zoom-in"
 												data-aos-delay="1800">
-												<i class="fa-brands fa-html5 fs-1 text-orange"></i>
+												<img src="{{ asset('img/html.png') }}" alt="HTML" class="img-tech">
+												{{-- <i class="fa-brands fa-html5 fs-1 text-orange"></i> --}}
 
-												<i class="fa-brands fa-css3-alt fs-1 text-primary"></i>
+												<img src="{{ asset('img/css.png') }}" alt="CSS" class="img-tech">
+												{{-- <i class="fa-brands fa-css3-alt fs-1 text-primary"></i> --}}
 
-												<i class="fa-brands fa-square-js fs-1 text-warning"></i>
+												<img src="{{ asset('img/js.png') }}" alt="JS" class="img-tech">
+												{{-- <i class="fa-brands fa-square-js fs-1 text-warning"></i> --}}
 
-												<i class="fa-brands fa-sass fs-1 text-danger"></i>
+												<img src="{{ asset('img/scss.png') }}" alt="SCSS" class="img-tech">
+												{{-- <i class="fa-brands fa-sass fs-1 text-danger"></i> --}}
+
+
 								</div>
 
 				</div>
@@ -78,13 +107,21 @@
 				<div class="row py-5 mb-5">
 								<div class="col-lg-12 d-flex flex-row justify-content-around align-items-center" data-aos="zoom-out"
 												data-aos-delay="1900">
-												<i class="fa-brands fa-react fs-1 text-info"></i>
 
-												<i class="fa-brands fa-php fs-1 text-purple"></i>
+												<img src="{{ asset('img/react.png') }}" alt="React JS" class="img-tech">
+												{{-- <i class="bi bi-filetype-jsx"></i> --}}
 
-												<i class="fab fa-laravel fs-1 text-maroon"></i>
+												<img src="{{ asset('img/php.png') }}" alt="PHP" class="img-tech">
+												{{-- <i class="bi bi-filetype-php"></i> --}}
 
-												<i class="fa-brands fa-node fs-1 text-success"></i>
+												<img src="{{ asset('img/laravel.png') }}" alt="Laravel" class="img-tech">
+												{{-- <i class="fab fa-laravel fs-1 text-maroon"></i> --}}
+
+												<img src="{{ asset('img/node.png') }}" alt="Node JS" class="img-tech">
+												{{-- <i class="fa-brands fa-node fs-1 text-success"></i> --}}
+
+
+
 								</div>
 				</div>
 
