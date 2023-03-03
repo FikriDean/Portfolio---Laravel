@@ -62,14 +62,14 @@
 
 				<div class="row mb-5">
 								<div class="col-lg-6 mt-5 d-flex justify-content-center align-items-center">
-												<a href="">
+												<a href="https://confido.fikridean.my.id/">
 																<img class="bigger-animation img-tech" src="{{ asset('img/logo_confido.png') }}" alt="Confido"
 																				style="max-width: 200px">
 												</a>
 								</div>
 
 								<div class="col-lg-6 mt-5 d-flex justify-content-center align-items-center">
-												<a href="">
+												<a href="https://chat.fikridean.my.id/">
 																<img class="bigger-animation img-tech" src="{{ asset('img/chat.png') }}" alt="Chat"
 																				style="max-width: 80px">
 												</a>
